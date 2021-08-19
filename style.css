@@ -1,22 +1,22 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-ul{
+ul {
     margin-bottom: 0;
 }
-hr{
-    margin: 0
+hr {
+    margin: 0;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+    font-family: "Poppins", sans-serif;
 }
 
 /* seccion barra superior */
 
-.barrasuperior{
+.barrasuperior {
     width: 100%;
     height: 2rem;
     background-color: black;
@@ -26,24 +26,23 @@ body{
     align-items: center;
 }
 
-div a i{
+div a i {
     color: cornsilk;
 }
 
 /* seccion navbar */
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-.contenedor{
+.contenedor {
     width: 90%;
     margin: auto;
-    
 }
 
-.nav-main{
+.nav-main {
     font-size: 17px;
     display: flex;
     justify-content: space-between;
@@ -52,29 +51,30 @@ a{
     padding: 20px 0;
 }
 
-.nav-brand{
+.nav-brand {
     width: 140px;
 }
-.nav-main ul{
+.nav-main ul {
     display: flex;
-
 }
 
 .nav-main ul li {
     padding: 10px;
     list-style: none;
-    
 }
-.nav-main ul li a{
-    
+.nav-main ul li a {
     padding: 18px;
 }
 
-.nav-main ul.nav-menu.show {
-    transform: translateX(0px);
-  }
+.menu-btn{
+    font-size: 30px;
+}
 
-.nav-main ul li a:hover{
+.nav-main ul.nav-menu.show {
+    transform: translateX(-35px);
+}
+
+.nav-main ul li a:hover {
     border-bottom: 2px solid black;
     border-right: 2px solid black;
     border-left: 2px solid black;
@@ -83,11 +83,17 @@ a{
     color: cornsilk;
 }
 
-.nav-menu-right a i{
+.nav-menu-right a i {
     color: black;
 }
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
 
-.separador-texto{
+.separador-texto {
     width: 100%;
     padding: 100px 50px;
     text-align: justify;
@@ -99,24 +105,25 @@ a{
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%230e0d0f' fill-opacity='0.19'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-.separador-texto h2,p{
-    font-weight: bold ;
+.separador-texto h2,
+p {
+    font-weight: bold;
 }
 
-footer{
+footer {
     background-color: rgba(71, 83, 95, 0.883);
     color: maroon;
 }
 
-footer i:hover{
+footer i:hover {
     color: maroon;
 }
 
-@media (max-width:375px){
-    .barrasuperior{
+@media (max-width: 375px) {
+    .barrasuperior {
         display: none;
     }
-    .nav-main ul.nav-menu{
+    .nav-main ul.nav-menu {
         display: block;
         position: absolute;
         height: 100%;
@@ -126,14 +133,43 @@ footer i:hover{
         color: black;
         transform: translateX(-250px);
         z-index: 2;
-        transition: .5s ease-in-out;
+        transition: 0.5s ease-in-out;
     }
-    .nav-main ul li a:hover{
+    .nav-main ul li a:hover {
         border-bottom: 2px solid black;
         border-right: 2px solid black;
         border-left: 2px solid black;
         transition: 0.5s;
         background-color: black;
         color: cornsilk;
+    }
+}
+
+@media (max-width: 414px) {
+    .barrasuperior {
+        display: none;
+    }
+    .nav-main ul.nav-menu {
+        display: block;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: mintcream;
+        color: black;
+        transform: translateX(-250px);
+        z-index: 2;
+        transition: 0.5s ease-in-out;
+        opacity: 0.9;
+        padding-top: 40px;
+    }
+    .nav-main ul.nav-menu li {
+        padding: 20px 0;
+        text-align: center;
+    }
+    .nav-main ul.nav-menu li a {
+        border-bottom: 1px solid black;
+
+        transition: 0.5s;
     }
 }
